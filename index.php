@@ -11,6 +11,7 @@
     <title>Crud com PDO</title>
 </head>
 <body>
+<?php require_once 'db.php' ?>
     <div class="container mt-3">
     <h2 class="text-center">Crud com PDO e Bootstrap 4 </h2> <hr>
     <div class="float-right">
@@ -72,11 +73,12 @@
                 </tr>
             </thead>
             <tbody>
+            <?php foreach($result as $row): ?>
                 <tr>
-                    <td>1</td>
-                    <td>Roberto</td>
-                    <td>ro@mail.com</td>
-                    <td>Belo Horizonte</td>
+                    <td><?= $row['cadastro_id']; ?> </td>
+                    <td><?= $row['cadastro_nome']; ?> </td>
+                    <td><?= $row['cadastro_email']; ?> </td>
+                    <td><?= $row['cadastro_cidade']; ?> </td>
                     <td>
                         <input type="button" class="btn btn-info btn-sm">
                         <a href="">Editar</a>
@@ -87,6 +89,7 @@
                         <a href="">Deletar</a>
                     </td>
                 </tr>
+            <?php endforeach; ?>
             </tbody>
         </table>
     </div>
