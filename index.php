@@ -49,15 +49,51 @@
                         </select>
                     </div>                
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer mb-2">
                     <button type="button" class="btn btn-success">Adicionar</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
     </div>
+     <!-- table -->
+     <div class="table-responsive card" >
+        <div class="card-header text-center">
+                Painel de Usuários
+        </div>
+        <table class="table table-bordered table-hover mt-3">
+            <thead class="thead-dark">
+                <tr>
+                    <td>#</td>
+                    <td>Nome</td>
+                    <td>Email</td>
+                    <td>Cidade</td>
+                    <td colspan="2">Ações</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Roberto</td>
+                    <td>ro@mail.com</td>
+                    <td>Belo Horizonte</td>
+                    <td>
+                        <input type="button" class="btn btn-info btn-sm">
+                        <a href="">Editar</a>
+                    </td>
+
+                    <td>
+                        <input type="button" class="btn btn-danger btn-sm">
+                        <a href="">Deletar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
+    </div>
+
+   
     <script>
         $(document).ready(function() {
             $('#btnOpenModal').click(function(){
