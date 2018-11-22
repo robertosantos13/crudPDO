@@ -35,11 +35,11 @@ if(isset($_POST['salvar'])){
 
 
 // deletar
-if(isset($_GET['delete'])){
- 
+if(isset($_GET['cadastro_id'])){
+   
     try {
-       
-        $id = $_GET['delete'];
+      
+        $id = $_GET['cadastro_id'];
         $sql = "DELETE FROM cadastro WHERE cadastro_id='$id'";
         $conn->exec($sql);
 
